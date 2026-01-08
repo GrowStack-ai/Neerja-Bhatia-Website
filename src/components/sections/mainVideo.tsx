@@ -25,19 +25,8 @@ const VideoCarouselOne: React.FC = () => {
     }
   ];
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % videos.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + videos.length) % videos.length);
-  };
-
   const getYouTubeEmbedUrl = (videoId: string): string =>
     `https://www.youtube.com/embed/${videoId}`;
-
-  const getPrevIndex = () => (currentSlide - 1 + videos.length) % videos.length;
-  const getNextIndex = () => (currentSlide + 1) % videos.length;
 
   // Reset description expansion when slide changes
   useEffect(() => {
@@ -46,9 +35,6 @@ const VideoCarouselOne: React.FC = () => {
 
   return (
     <div className="w-full bg-white pt-2 py-8 mb-0 flex justify-center items-center">
-      {/* Header */}
-
-
             {/* Center Video */}
             <div className="w-[900px] flex-shrink-0 relative mx-4 z-20 h-full flex flex-col justify-center">
               <h2 className="text-xl font-semibold text-black mb-6 text-center whitespace-nowrap overflow-hidden text-ellipsis font-size-4xl">
@@ -64,21 +50,6 @@ const VideoCarouselOne: React.FC = () => {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   ></iframe>
-
-                  {/* Navigation buttons */}
-                  {/* <button
-                    onClick={prevSlide}
-                    className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white border border-gray-400 shadow-md hover:bg-gray-100 active:bg-gray-200 flex items-center justify-center z-30 transition-all duration-200"
-                  >
-                    <ChevronLeft className="w-4 h-4 text-gray-700" />
-                  </button>
-
-                  <button
-                    onClick={nextSlide}
-                    className="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white border border-gray-400 shadow-md hover:bg-gray-100 active:bg-gray-200 flex items-center justify-center z-30 transition-all duration-200"
-                  >
-                    <ChevronRight className="w-4 h-4 text-gray-700" />
-                  </button> */}
                 </div>
               </div>
               <div className="mt-6 px-4">
