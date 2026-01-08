@@ -8,11 +8,13 @@ import TEDxEventSection from '@/components/sections/TEDxEventSection ';
 import Testimonials from '@/components/sections/Testimonials ';
 import ContactForm from '@/components/sections/ContactForm';
 import VideoCarousel from '@/components/sections/VideoCarousel ';
+import VideoCarouselOne from '@/components/sections/mainVideo';
 
 
 export default function Home() {
   return (
     <Layout>
+      <VideoCarouselOne/>
       <ChallengeSection />
       <PromiseSection />
       <AboutSection/>
