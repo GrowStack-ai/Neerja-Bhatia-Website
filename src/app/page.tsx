@@ -7,7 +7,7 @@ import PublicationSection from '@/components/sections/PublicationSection ';
 import TEDxEventSection from '@/components/sections/TEDxEventSection ';
 import Testimonials from '@/components/sections/Testimonials ';
 import ContactForm from '@/components/sections/ContactForm';
-import VideoCarousel from '@/components/sections/VideoCarousel ';
+// import VideoCarousel from '@/components/sections/VideoCarousel ';
 import VideoCarouselOne from '@/components/sections/mainVideo';
 
 
@@ -23,7 +23,7 @@ export default function Home() {
       <TEDxEventSection/>
       <Testimonials/>
       <ContactForm/>
-      <VideoCarousel/>
+      {/* <VideoCarousel/> */}
     </Layout>
   );
 }

@@ -14,9 +14,12 @@ const VideoCarouselOne: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
   const [isDescriptionExpanded, setIsDescriptionExpanded] = useState<boolean>(false);
 
+  // YouTube channel URL - Update this with your channel URL
+  const youtubeChannelUrl = "https://www.youtube.com/watch?v=IuXt9oV0A0Q";
+
   const videos: Video[] = [
     {
-      id: "IuXt9oV0A0Q",
+      id: "rQ9CaNNBPsc",
       title: "TEDx",
       description:
         "An invitation to transcend the limits of identity and awaken to the deeper field of Living Intelligence.  Neerja Bhatia is a compassionate guide and visionary thinker with over 25 years of experience inspiring transformative growth in leaders from startups to Fortune 500 companies. She has worked with leaders and teams at organizations such as Red Hat, McKinsey, Meta, and Phillips. Neerja is the creator of the Field of Living Intelligence framework, a heartfelt methodology rooted in consciousness studies, Eastern wisdom, and authentic leadership that awakens the true self hidden beneath layers of noise and expectation.",
@@ -42,16 +45,23 @@ const VideoCarouselOne: React.FC = () => {
                   {videos[currentSlide].title}
                 </span>
               </h2>
-              <div className="relative w-full h-[500px] rounded-xl border-2 border-gray-100 shadow-xl">
+              <a
+                href={youtubeChannelUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative w-full h-[500px] rounded-xl border-2 border-gray-100 shadow-xl block cursor-pointer group"
+              >
                 <div className="p-2 w-full h-full bg-gray-100 rounded-xl">
                   <iframe
                     src={getYouTubeEmbedUrl(videos[currentSlide].id)}
-                    className="w-full h-full rounded-xl"
+                    className="w-full h-full rounded-xl pointer-events-none"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   ></iframe>
                 </div>
-              </div>
+                {/* Clickable overlay */}
+                <div className="absolute inset-0 bg-transparent group-hover:bg-black/5 transition-colors duration-200 rounded-xl z-10"></div>
+              </a>
               <div className="mt-6 px-4">
                 <div className="max-w-4xl mx-auto text-center">
                   <p className="text-md font-semibold text-[#000000] mb-4 leading-relaxed">
