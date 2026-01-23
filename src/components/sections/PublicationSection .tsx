@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Image from 'next/image';
 import { ArrowUpRight } from "lucide-react";
 
 const PublicationSection = () => {
@@ -13,7 +14,7 @@ const PublicationSection = () => {
     <div className="bg-white font-dm-sans mb-0">
       <section className="max-w-7xl mx-auto px-6 py-10 sm:py-14 md:py-16 flex flex-col md:flex-row items-center gap-12 md:gap-24">
         <div className="flex-shrink-0 w-full md:w-1/2 rounded-lg overflow-hidden">
-          <img
+          <Image
             src="/images/Books.jpg"
             alt="Three books titled 'Art of Resilience' with blue and white covers placed on a white shelf with a white spherical decorative object"
             width={600}

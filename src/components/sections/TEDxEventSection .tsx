@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Image from 'next/image';
 import { ArrowUpRight } from "lucide-react";
 
 const TEDxEventSection = () => {
@@ -24,14 +25,14 @@ const TEDxEventSection = () => {
               Journey to Remembering
             </h2>
             <p className="text-[18px] leading-tight mb-4 ">
-              This November, I'll take the{' '}
+              This November, I&apos;ll take the{' '}
               <a className="text-[#6433F6] hover:underline font-semibold" href="# font-dm-sans text-[30px]">
                 TEDxApex
               </a>{' '}
               stage to share something close to my heart —{' '}
               <em>Journey to Remembering</em>.
               <br />
-              It's not about becoming someone new, but{' '}
+              It&apos;s not about becoming someone new, but{' '}
               <a className="text-[#6433F6] hover:underline font-semibold" href="#">
                 returning to who we were
               </a>{' '}
@@ -45,13 +46,13 @@ const TEDxEventSection = () => {
             <ul className="mb-8 space-y-4 text-[18px]">
               <li className="flex items-center gap-3">
               <span className="flex items-center justify-center w-9 h-9 rounded-md bg-[#E6E0FF]">
-                <img src="/images/calender.png" className="w-5 h-5 object-contain" alt="calendar icon" />
+                <Image src="/images/calender.png" width={20} height={20} className="w-5 h-5 object-contain" alt="calendar icon" />
               </span>
               <span className="text-[16px] text-gray-800">November 6, 2025</span>
             </li>
             <li className="flex items-center gap-3">
               <span className="flex items-center justify-center w-9 h-9 rounded-md bg-[#E6E0FF]">
-                <img src="/images/location.png" className="w-5 h-5 object-contain" alt="location icon" />
+                <Image src="/images/location.png" width={20} height={20} className="w-5 h-5 object-contain" alt="location icon" />
               </span>
               <span className="text-[16px] text-gray-800">Apex, North Carolina</span>
             </li>
@@ -61,7 +62,7 @@ const TEDxEventSection = () => {
                 Tickets are now live
               </p>
               <p className="mb-0 text-[20px]">
-                — I'd be honored to have you there.
+                — I&apos;d be honored to have you there.
               </p>
             </div>
             <button 
@@ -74,13 +75,13 @@ const TEDxEventSection = () => {
             </button>
           </section>
           <section className="lg:w-1/2 mt-10 lg:mt-0">
-            <img 
+            <Image 
               alt="Large red TEDx letters on a stage with a dark black background and purple light reflection on the floor" 
               className="rounded-xl w-full object-cover" 
-              height="350" 
+              height={350}
               loading="lazy" 
               src="/images/tedximage.png" 
-              width="550"
+              width={550}
             />
           </section>
         </div>
