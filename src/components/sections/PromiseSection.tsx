@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const PromiseSection = () => {
   const cards = [
     {
@@ -52,9 +54,11 @@ const PromiseSection = () => {
                 {/* Image */}
           <div className="rounded-[24px] p-0 w-[320px] h-[280px] bg-[radial-gradient(ellipse_at_top_left,_#FFFFFF_10%,_#EDE7FF_80%)] shadow-sm flex items-center justify-center">
 
-              <img
+              <Image
                 src={card.image} 
                 alt={card.imageAlt}
+                width={320}
+                height={280}
                 className="w-full h-full object-cover"
               />
             </div>

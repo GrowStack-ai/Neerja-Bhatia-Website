@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Header from '../layouts/Header';
 import HeroSection from './HeroSection';
 
@@ -8,11 +9,12 @@ const HeaderHeroWrapper = () => {
     <div className="relative overflow-hidden min-h-screen">
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full z-0">
-        <div className="w-full h-full bg-gradient-to-br from-purple-50 to-purple-100">
-          <img
+        <div className="relative w-full h-full bg-gradient-to-br from-purple-50 to-purple-100">
+          <Image
             src="/images/hero-background.jpg"
             alt="Abstract purple geometric background"
-            className="w-full h-full object-cover opacity-80"
+            fill
+            className="object-cover opacity-80"
           />
         </div>
 
