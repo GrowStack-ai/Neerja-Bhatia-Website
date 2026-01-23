@@ -1,5 +1,6 @@
 
 import React from 'react';
+import Image from 'next/image';
 
 const AboutSection = () => {
   return (
@@ -40,8 +41,8 @@ const AboutSection = () => {
             </p>
 
             <p>
-              In a world filled with noise and relentless pressure, Neerja reminds us that clarity isn't something to
-              be hunted or found outside—it's something we carry within, waiting to be remembered. Her work
+              In a world filled with noise and relentless pressure, Neerja reminds us that clarity isn&apos;t something to
+              be hunted or found outside—it&apos;s something we carry within, waiting to be remembered. Her work
               invites leaders and change-makers to listen inward, trust their innate wisdom, and return to the
               stillness where authentic guidance resides.
             </p>
@@ -58,9 +59,11 @@ const AboutSection = () => {
         <div className="flex-1 relative min-h-[500px]">
 
           <div className="absolute bottom-0 right-0 w-full max-w-lg h-full flex items-end justify-center mb-14">
-            <img
+            <Image
               src="/images/neerja-portrait.jpg"
               alt="Portrait of Neerja Bhatia wearing black top and glasses with necklace, smiling"
+              width={600}
+              height={600}
               className="w-full h-[600px] object-contain object-center scale-125"
             />
           </div>

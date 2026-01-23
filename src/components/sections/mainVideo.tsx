@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface Video {
   id: string;
@@ -11,7 +10,7 @@ interface Video {
 }
 
 const VideoCarouselOne: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState<number>(0);
+  const [currentSlide] = useState<number>(0);
   const [isDescriptionExpanded, setIsDescriptionExpanded] = useState<boolean>(false);
 
   // YouTube channel URL - Update this with your channel URL
