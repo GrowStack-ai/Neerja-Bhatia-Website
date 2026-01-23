@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from 'next/image';
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const Testimonials = () => {
@@ -78,11 +79,11 @@ const Testimonials = () => {
         </p>
         <div className="relative text-black text-base leading-relaxed flex-1" style={{ fontFamily: "DM Sans" }}>
           <div className="absolute -left-4 -top-2 w-6 h-6">
-            <img src="/images/Quote-up.png" className="w-full h-full object-contain" alt="Quote" />
+            <Image src="/images/Quote-up.png" width={24} height={24} className="w-full h-full object-contain" alt="Quote" />
           </div>
           <p className="pl-8 pr-8 text-[#000000] leading-6">{testimonial.content}</p>
           <div className="absolute -right-4 -bottom-2 w-6 h-6">
-            <img src="/images/Quote-down.png" className="w-full h-full object-contain" alt="Quote" />
+            <Image src="/images/Quote-down.png" width={24} height={24} className="w-full h-full object-contain" alt="Quote" />
           </div>
         </div>
       </div>
@@ -92,9 +93,11 @@ const Testimonials = () => {
   return (
     <section className="relative max-w-[1400px] mx-auto px-4 pt-0 pb-8">
       <div className="relative w-full mb-8">
-        <img
+        <Image
           src="/images/Container.png"
           alt="Container banner"
+          width={1400}
+          height={400}
           className="w-full h-auto object-cover"
           style={{ maxHeight: "400px" }}
         />
@@ -144,11 +147,11 @@ const Testimonials = () => {
             </p>
             <div className="relative text-black text-base leading-relaxed flex-1" style={{ fontFamily: "DM Sans" }}>
               <div className="absolute -left-4 -top-2 w-6 h-6">
-                <img src="/images/Quote-up.png" className="w-full h-full object-contain" alt="Quote" />
+                <Image src="/images/Quote-up.png" width={24} height={24} className="w-full h-full object-contain" alt="Quote" />
               </div>
               <p className="pl-8 pr-8 text-[#000000] leading-6">{current.content}</p>
               <div className="absolute -right-4 -bottom-2 w-6 h-6">
-                <img src="/images/Quote-down.png" className="w-full h-full object-contain" alt="Quote" />
+                <Image src="/images/Quote-down.png" width={24} height={24} className="w-full h-full object-contain" alt="Quote" />
               </div>
             </div>
           </div>
